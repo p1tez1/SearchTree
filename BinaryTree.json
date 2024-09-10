@@ -1,0 +1,33 @@
+{
+  "Date": 10,
+  "Left": {
+    "Date": 7,
+    "Left": {
+      "Date": 4,
+      "Left": null,
+      "Right": null
+    },
+    "Right": {
+      "Date": 9,
+      "Left": null,
+      "Right": null
+    }
+  },
+  "Right": {
+    "Date": 20,
+    "Left": {
+      "Date": 17,
+      "Left": null,
+      "Right": null
+    },
+    "Right": {
+      "Date": 25,
+      "Left": null,
+      "Right": {
+        "Date": 28,
+        "Left": null,
+        "Right": null
+      }
+    }
+  }
+}

@@ -1,25 +1,29 @@
-var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using System;
+namespace Markiian
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateBinaryTree tree = new CreateBinaryTree();
+
+            Console.WriteLine("In-Order Traversal:\n");
+            string FilePath = @"D:\Programing\C#\Tree\BinaryTree.json";
+            tree.LoadFromFile(FilePath);
+            Console.WriteLine("Binary tree loaded from file:");
+            tree.PrintTree();
+            Console.WriteLine("Enter a number to check:");
+            int number = int.Parse(Console.ReadLine());
+            Node node = tree.FindNode(number);
+            if (node != null)
+            {
+                node.LeafofBrench();
+            }
+            else
+            {
+                Console.WriteLine($"{number} not found in the tree.");
+            }
+        }
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();

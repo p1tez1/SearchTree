@@ -1,6 +1,6 @@
 @Tree_HostAddress = http://localhost:5293
 
-GET {{Tree_HostAddress}}/weatherforecast/
+GET {{Tree_HostAddress}}/Program/
 Accept: application/json
 
 ###
